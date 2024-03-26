@@ -2,10 +2,6 @@
 import AppHeader from './components/AppHeader.vue'
 import AppMain from './components/AppMain.vue'
 import AppFooter from './components/AppFooter.vue'
-import products from './assets/products.json'; 
-
-
-
 
 export default {
   name: 'App',
@@ -15,18 +11,17 @@ export default {
     AppFooter,
   }
 }
+
 </script>
 
 <template>
 
-  <AppHeader/>
+  <AppHeader />
 
-  <AppMain/>
+  <AppMain />
 
-  <AppFooter/>
+  <AppFooter />
 
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

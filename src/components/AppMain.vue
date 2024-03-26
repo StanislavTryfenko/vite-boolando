@@ -1,23 +1,35 @@
 <script>
+import ShopCard from './ShopCard.vue';
+import { state } from "../assets/state.js"
+
 export default {
+    data() {
+        return {
+            state: state
+        }
+    },
+
     name: 'AppMain',
     components: {
         ShopCard,
-    }
+    },
+    
+    mounted() {
+        state.getProducts()
+    },
 }
-import ShopCard from './ShopCard.vue';
+
 </script>
 
 <template>
     <main>
-        <div class="showcase">
-            <ShopCard/>
-        </div>
+        <ShopCard :product="product"
+        v-for="(product) in state.products" :key="product.id" />
     </main>
 </template>
 
 <style scoped>
-.showcase{
+main{
     padding: 10% 20%;
     display: flex;
     flex-wrap: wrap;
